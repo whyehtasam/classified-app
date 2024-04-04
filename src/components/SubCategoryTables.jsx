@@ -57,10 +57,11 @@ export default function Tables({ categories, setCategories }) {
     return (
         <div className="card">
             <DataTable value={categories} paginator rows={5} rowsPerPageOptions={[5, 10, 25, 50]} tableStyle={{ minWidth: '50rem' }}>
-                <Column body={indexBodyTemplate} header="S No." style={{ width: '10%' }}></Column>
-                <Column field="name" header="Category" style={{ width: '25%' }}></Column>
+                <Column body={indexBodyTemplate} header="Sr No" style={{ width: '10%' }}></Column>
+                <Column field="category.name" header="Category" style={{ width: '25%' }}></Column>
+                <Column body={subCategoriesBodyTemplate} header="Sub Categories" style={{ width: '25%' }}></Column>
                 <Column field="createdDate" header="Created Date" style={{ width: '25%' }}></Column>
-                <Column body={actionBodyTemplate} header="Action" style={{ width: '25%' }}></Column>
+                <Column body={actionBodyTemplate} header="Actions" style={{ width: '15%' }}></Column>
             </DataTable>
 
             <Dialog visible={visible} style={{ width: '450px' }} header="Edit Category" modal className="p-fluid" footer={dialogFooter} onHide={() => setVisible(false)}>
