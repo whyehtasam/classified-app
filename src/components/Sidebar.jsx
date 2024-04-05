@@ -11,6 +11,12 @@ const Sidebar = () => {
       <Link to="/subCategory">
         <Button label="Sub Category" />
       </Link>
+      <Link to="/manageAds">
+        <Button label="View Ads" />
+      </Link>
+      <Link to="/manageUsers">
+        <Button label="View Users" />
+      </Link>
     </div>
   );
 };

@@ -9,3 +9,7 @@
   @tailwind components;
   @tailwind utilities;
 }
+.p-column-filter{
+  /* padding: 0.5rem;
+  width: 1rem; */
+}

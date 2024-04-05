@@ -7,6 +7,9 @@ import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
 import Category from "./components/SetCategory";
 import SubCategory from "./components/SetSubCategory";
+import ManageAds from "./components/ManageAds";
+import ManageUsers from "./components/ManageUsers";
+
 function App() {
   return (
     <Router>
@@ -20,6 +23,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Category />} />
               <Route path="/subCategory" element={<SubCategory/>} />
+              <Route path="/manageAds" element={<ManageAds/>} />
+              <Route path="/manageUsers" element={<ManageUsers/>} />
             </Routes>
           </div>
         </div>
