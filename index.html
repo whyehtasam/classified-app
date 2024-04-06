@@ -5,6 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
+    <script>
+      const handleDomReady = () => {
+        const style = document.createElement('style');
+        style.innerHTML = '@layer tailwind-base, primereact, tailwind-utilities;';
+        style.setAttribute('type', 'text/css');
+        document.querySelector('head').prepend(style);
+      };
+    
+      window.addEventListener('DOMContentLoaded', handleDomReady);
+    </script>
   </head>
   <body>
     <div id="root"></div>

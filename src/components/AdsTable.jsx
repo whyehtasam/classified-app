@@ -16,7 +16,7 @@ export default function AdsTable() {
     subCategory: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
     userEmail: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
     membership: { value: null, matchMode: FilterMatchMode.EQUALS },
-    price: { value: null, matchMode: FilterMatchMode.EQUALS },
+    price: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
     status: { value: null, matchMode: FilterMatchMode.EQUALS },
   });
   const [loading, setLoading] = useState(true);
@@ -77,7 +77,7 @@ export default function AdsTable() {
             value={globalFilterValue}
             onChange={onGlobalFilterChange}
             placeholder="Keyword Search"
-            className="px-8 py-2"
+            // className="px-8 py-2"
           />
         </span>
       </div>
@@ -115,24 +115,24 @@ export default function AdsTable() {
   const actionBodyTemplate = () => {
     return (
       <React.Fragment>
-        <Button icon="pi pi-eye" className="p-button-rounded p-button-success p-mr-2" />
-        <Button icon="pi pi-trash" className="p-button-rounded p-button-warning" />
+        <Button icon="pi pi-eye" className="p-button-rounded p-button-success mr-2" />
+        <Button icon="pi pi-trash" className="p-button-rounded p-button-danger" />
       </React.Fragment>
     );
   };
 
   const header = renderHeader();
-  const priceRowFilterTemplate = (options) => {
-    return (
-      <Slider
-        value={options.value || [0, 1000]}
-        onChange={(e) => options.filterApplyCallback(e.value)}
-        range
-        min={0}
-        max={1000}
-      />
-    );
-  };
+  // const priceRowFilterTemplate = (options) => {
+  //   return (
+  //     <Slider
+  //       value={options.value || [0, 1000]}
+  //       onChange={(e) => options.filterApplyCallback(e.value)}
+  //       range
+  //       min={0}
+  //       max={1000}
+  //     />
+  //   );
+  // };
   return (
     <div className="card">
       <DataTable
@@ -153,7 +153,7 @@ export default function AdsTable() {
         <Column field="subCategory" header="Sub Category" filter filterPlaceholder="Search by sub category" style={{ minWidth: "12rem" }} />
         <Column field="userEmail" header="User Email" filter filterPlaceholder="Search by user email" style={{ minWidth: "12rem" }} />
         <Column field="membership" header="Membership" filter filterElement={membershipRowFilterTemplate} style={{ minWidth: "12rem" }} />
-        <Column field="price" header="Price" filter filterElement={priceRowFilterTemplate} style={{ minWidth: "12rem" }} />
+        <Column field="price" header="Price" filter filterPlaceholder="Search by Price"style={{ minWidth: "12rem" }} />
         <Column field="status" header="Status" filter filterElement={statusRowFilterTemplate} style={{ minWidth: "12rem" }} />
         <Column field="actions" header="Actions" body={actionBodyTemplate} style={{ minWidth: "12rem" }} />
       </DataTable>

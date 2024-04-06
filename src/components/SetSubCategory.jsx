@@ -81,14 +81,14 @@ const SetSubCategory = () => {
               />
               <Button
                 icon="pi pi-trash"
-                className=" p-button-danger text-red-600"
+                className=" p-button-danger"
                 onClick={() => handleDelete(index)}
               />
             </div>
           ))}
           <Button
             icon="pi pi-plus"
-            className=" p-button-danger rounded-full bg-slate-100 w-14 h-14 font-bold hover:bg-slate-200"
+            className=" bg-slate-100 hover:bg-slate-200 text-black rounded-full  w-14 h-14 font-bold hover:bg-slate-200"
             onClick={handleAddMore}
           />
         </div>

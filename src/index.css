@@ -1,4 +1,3 @@
-
 @layer tailwind-base, primereact, tailwind-utilities;
 
 @layer tailwind-base {
@@ -8,8 +7,4 @@
 @layer tailwind-utilities {
   @tailwind components;
   @tailwind utilities;
-}
-.p-column-filter{
-  /* padding: 0.5rem;
-  width: 1rem; */
 }
