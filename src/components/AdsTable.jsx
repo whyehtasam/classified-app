@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { classNames } from "primereact/utils";
+import  { useState, useEffect } from "react";
 import { FilterMatchMode } from "primereact/api";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { InputText } from "primereact/inputtext";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
-import { Slider } from "primereact/slider";
+import AdsViewDialog from "./AdsViewDialog";
+import { AdsUserData } from "./data/AdsData";
+
 export default function AdsTable() {
+
   const [ads, setAds] = useState(null);
   const [filters, setFilters] = useState({
     global: { value: null, matchMode: FilterMatchMode.CONTAINS },
@@ -15,10 +17,11 @@ export default function AdsTable() {
     category: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
     subCategory: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
     userEmail: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
-    membership: { value: null, matchMode: FilterMatchMode.EQUALS },
+    membership: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
     price: { value: null, matchMode: FilterMatchMode.STARTS_WITH },
     status: { value: null, matchMode: FilterMatchMode.EQUALS },
   });
+
   const [loading, setLoading] = useState(true);
   const [globalFilterValue, setGlobalFilterValue] = useState("");
   const [statuses] = useState([
@@ -70,14 +73,14 @@ export default function AdsTable() {
 
   const renderHeader = () => {
     return (
-      <div className="flex justify-content-end">
-        <span className="p-input-icon-left space-x-2">
+      <div className="flex justify-end">
+        <span className="p-input-icon-left ">
           <i className="pi pi-search" />
           <InputText
             value={globalFilterValue}
             onChange={onGlobalFilterChange}
             placeholder="Keyword Search"
-            // className="px-8 py-2"
+            className="px-18 py-3"
           />
         </span>
       </div>
@@ -114,10 +117,11 @@ export default function AdsTable() {
 
   const actionBodyTemplate = () => {
     return (
-      <React.Fragment>
-        <Button icon="pi pi-eye" className="p-button-rounded p-button-success mr-2" />
+      <div className="flex">
+    
+        <AdsViewDialog data={AdsUserData}/>
         <Button icon="pi pi-trash" className="p-button-rounded p-button-danger" />
-      </React.Fragment>
+      </div>
     );
   };
 
@@ -153,7 +157,7 @@ export default function AdsTable() {
         <Column field="subCategory" header="Sub Category" filter filterPlaceholder="Search by sub category" style={{ minWidth: "12rem" }} />
         <Column field="userEmail" header="User Email" filter filterPlaceholder="Search by user email" style={{ minWidth: "12rem" }} />
         <Column field="membership" header="Membership" filter filterElement={membershipRowFilterTemplate} style={{ minWidth: "12rem" }} />
-        <Column field="price" header="Price" filter filterPlaceholder="Search by Price"style={{ minWidth: "12rem" }} />
+        <Column field="price" header="Price" filter  filterPlaceholder="Search by Price"style={{ minWidth: "12rem" }} />
         <Column field="status" header="Status" filter filterElement={statusRowFilterTemplate} style={{ minWidth: "12rem" }} />
         <Column field="actions" header="Actions" body={actionBodyTemplate} style={{ minWidth: "12rem" }} />
       </DataTable>

@@ -17,6 +17,12 @@ const Sidebar = () => {
       <Link to="/manageUsers">
         <Button label="View Users" />
       </Link>
+      <Link to="/managePremiumUsers">
+        <Button label="Premium Users" />
+      </Link>
+      <Link to="/createSubAdmin">
+        <Button label="Create Sub admin" />
+      </Link>
     </div>
   );
 };

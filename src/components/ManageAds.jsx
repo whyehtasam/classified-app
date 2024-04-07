@@ -1,12 +1,11 @@
-import AdsTable from "./AdsTable"
+import AdsTable from "./AdsTable";
 
 const ManageAds = () => {
   return (
-    <section className="ads scale-90">
-        <AdsTable/>
-
+    <section className="ads">
+      <AdsTable />
     </section>
-  )
-}
+  );
+};
 
-export default ManageAds
+export default ManageAds;

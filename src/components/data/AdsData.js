@@ -1,0 +1,50 @@
+export const AdsUserData = {
+  productId: 100,
+  category: "electronics",
+  sub_category: "Mobile",
+  Title: "iPhone 7Smartphone",
+  description: "A high-end smartphone with advanced features. with ram 4GB",
+  price: 799.99,
+  quantity: 1,
+  name: "Tuhin Mondal",
+  email: "test@gmail.com",
+  phone: "78182922",
+  country: "India",
+  State: "West Bengal",
+  City: "Barasat",
+  years_of_old: 1,
+  add_status: "Published",
+  created_date: "10/04/2024",
+  images: [
+    "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Otr7zJvU2IZVeevLOWUMpw.png",
+    "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Otr7zJvU2IZVeevLOWUMpw.png",
+    "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Otr7zJvU2IZVeevLOWUMpw.png",
+  ],
+};
+
+export const userData = [
+  {
+    name: "Tuhin Mondal",
+    email: "test@gmail",
+    phone: "1233232",
+    membership: "Premium",
+    status: "Active",
+    wallet_balance: 12220,
+  },
+  // {
+  //   name: "Ehtasam",
+  //   email: "test@gmail",
+  //   phone: "1233232",
+  //   membership: "Normal",
+  //   status: "Active",
+  //   wallet_balance: 12220,
+  // },
+  // {
+  //   name: "Habib",
+  //   email: "test@gmail",
+  //   phone: "1233232",
+  //   membership: "Premium",
+  //   status: "Active",
+  //   wallet_balance: 12220,
+  // },
+];

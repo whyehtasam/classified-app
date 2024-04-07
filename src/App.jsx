@@ -9,6 +9,8 @@ import Category from "./components/SetCategory";
 import SubCategory from "./components/SetSubCategory";
 import ManageAds from "./components/ManageAds";
 import ManageUsers from "./components/ManageUsers";
+import PremiumUserTable from "./components/PremiumUser";
+import CreateSubAdmin from "./components/CreateSubAdmin";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
               <Route path="/subCategory" element={<SubCategory/>} />
               <Route path="/manageAds" element={<ManageAds/>} />
               <Route path="/manageUsers" element={<ManageUsers/>} />
+              <Route path="/managePremiumUsers" element={<PremiumUserTable/>} />
+              <Route path="/createSubAdmin" element={<CreateSubAdmin/>} />
             </Routes>
           </div>
         </div>
