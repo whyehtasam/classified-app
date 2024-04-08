@@ -11,6 +11,7 @@ import ManageAds from "./components/ManageAds";
 import ManageUsers from "./components/ManageUsers";
 import PremiumUserTable from "./components/PremiumUser";
 import CreateSubAdmin from "./components/CreateSubAdmin";
+import PremiumCategoryTable from "./components/PremiumCategory";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Route path="/manageUsers" element={<ManageUsers/>} />
               <Route path="/managePremiumUsers" element={<PremiumUserTable/>} />
               <Route path="/createSubAdmin" element={<CreateSubAdmin/>} />
+              <Route path="/premiumCategory" element={<PremiumCategoryTable/>} />
             </Routes>
           </div>
         </div>

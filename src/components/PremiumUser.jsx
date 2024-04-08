@@ -33,8 +33,8 @@ export default function PremiumAdsTable() {
   }, []);
 
   const header = (
-    <div className="table-header">
-      <h5 className="p-m-0">Manage Premium Ads</h5>
+    <div className="table-header flex justify-end">
+      {/* <h5 className="p-m-0">Manage Premium Ads</h5> */}
       <span className="p-input-icon-left">
         <i className="pi pi-search" />
         <InputText type="search" onInput={(e) => setGlobalFilter(e.target.value)} placeholder="Global Search" />
@@ -44,6 +44,8 @@ export default function PremiumAdsTable() {
 
   return (
     <div className="card">
+               <h1 className="text-4xl font-semibold mb-5">View Premium user details :</h1>
+
       <DataTable
         value={ads}
         paginator

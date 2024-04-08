@@ -45,8 +45,8 @@ export default function UserViewDialog({ data }) {
         maximizable
       >
         <section className="text-gray-600 body-font overflow-hidden">
-          <div className="container p-5 mx-auto">
-            <div className="lg:w-[550px] lg:p-6 mb-6 lg:mb-0">
+          <div className="container p-5 mx-auto flex justify-center">
+            <div className="lg:w-[550px] lg:p-6 mb- lg:mb-0">
               <div className="p-d-flex p-ai-center">
                 <Avatar icon="pi pi-user" size="large" shape="circle" />
                 <h2 className="mt-5 text-xl font-semibold title-font text-gray-500 tracking-widest">{data.name}</h2>

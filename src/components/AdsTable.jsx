@@ -151,6 +151,7 @@ export default function AdsTable() {
   globalFilterFields={["title", "category", "subCategory", "userEmail", "membership", "price", "status"]}
   header={header}
   emptyMessage="No ads found."
+  
 >
         <Column field="title" header="Title" filter filterPlaceholder="Search by title" style={{ minWidth: "12rem" }} />
         <Column field="category" header="Category" filter filterPlaceholder="Search by category" style={{ minWidth: "12rem" }} />
