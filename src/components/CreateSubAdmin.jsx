@@ -19,7 +19,9 @@ const CreateSubAdmin = () => {
   };
 
   const deleteSubAdmin = (rowData) => {
-    setSubAdmins(subAdmins.filter(subAdmin => subAdmin.userName !== rowData.userName));
+    setSubAdmins(
+      subAdmins.filter((subAdmin) => subAdmin.userName !== rowData.userName)
+    );
   };
 
   const openEditDialog = (index) => {
@@ -38,7 +40,7 @@ const CreateSubAdmin = () => {
 
   const actionBodyTemplate = (rowData, index) => {
     return (
-        <React.Fragment>
+      <React.Fragment>
         <Button
           icon="pi pi-pencil"
           className="p-button-rounded p-button-success mr-2"
@@ -60,7 +62,7 @@ const CreateSubAdmin = () => {
         visible={editDialogVisible}
         onHide={() => setEditDialogVisible(false)}
         modal
-        style={{ width: '50vw' }}
+        style={{ width: "50vw" }}
       >
         <div className="p-fluid">
           <div className="p-field">
@@ -87,9 +89,11 @@ const CreateSubAdmin = () => {
 
   return (
     <div>
-       <h1 className="text-2xl sm:text-4xl font-semibold mb-5">Create Sub admin:</h1>
+      <h1 className="text-2xl sm:text-4xl font-semibold mb-5">
+        Create Sub admin:
+      </h1>
 
-      <div className="flex space-x-4 my-8">
+      <div className="flex sm:space-x-4 my-8 sm:flex-row flex-col gap-4">
         <div className="flex-1">
           {/* <label htmlFor="username">User Name</label> */}
           <InputText
@@ -110,15 +114,15 @@ const CreateSubAdmin = () => {
             className="w-full"
           />
         </div>
-        <Button label="Add Sub-Admin" onClick={addSubAdmin} />
+        <Button label="Add Sub-Admin" onClick={addSubAdmin} className="p-button-success" />
       </div>
       {/* <h3>Sub-Admins</h3> */}
       <DataTable value={subAdmins}>
-  <Column field="userName" header="User Name" />
-  <Column field="email" header="Email" />
-  <Column body={actionBodyTemplate} header="Action" />
-</DataTable>
-{renderEditDialog()}
+        <Column field="userName" header="User Name" />
+        <Column field="email" header="Email" />
+        <Column body={actionBodyTemplate} header="Action" />
+      </DataTable>
+      {renderEditDialog()}
     </div>
   );
 };
