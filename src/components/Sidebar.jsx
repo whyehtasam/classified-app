@@ -2,11 +2,11 @@ import React from "react";
 
 import Button from "./SideButton";
 import { Link } from "react-router-dom";
-const Sidebar = () => {
+const Sidebar = ({closeSidebar}) => {
   return (
     <div className="border bg-slate-100 h-screen py-8 px-3 space-y-4 flex flex-col">
       <Link to="/">
-        <Button label="Category" />
+        <Button label="Category" onClick={()=> closeSidebar(false)}/>
       </Link>
       <Link to="/subCategory">
         <Button label="Sub Category" />

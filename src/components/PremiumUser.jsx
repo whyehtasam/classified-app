@@ -44,7 +44,7 @@ export default function PremiumAdsTable() {
 
   return (
     <div className="card">
-               <h1 className="text-4xl font-semibold mb-5">View Premium user details :</h1>
+               <h1 className="text-2xl sm:text-4xl font-semibold mb-5">View Premium user details :</h1>
 
       <DataTable
         value={ads}

@@ -55,7 +55,7 @@ const SetSubCategory = () => {
 
   return (
     <div className=" h-screen   space-y-6">
-      <h1 className="text-4xl font-semibold ">Add Sub Categories details :</h1>
+      <h1 className="text-2xl sm:text-4xl font-semibold ">Add Sub Categories details :</h1>
       <form action="" onSubmit={handleSubmit} className="grid gap-6">
         <div className="input-values  grid  gap-8">
           <div className="max-w-80">

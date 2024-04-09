@@ -57,11 +57,11 @@ export default function PremiumCategoryTable() {
 
   return (
     <div className="card">
-      <h1 className="text-4xl font-semibold mb-5">
+      <h1 className="text-2xl sm:text-4xl font-semibold mb-5">
         Add premium category details :
       </h1>
 
-      <div className="p-fluid p-formgrid grid grid-cols-2 gap-6 mb-6">
+      <div className="p-fluid p-formgrid grid sm:grid-cols-2 grid-cols-1 gap-6 mb-6">
         <div className="p-field p-col">
           <label htmlFor="name">Premium Ad Name</label>
           <InputText

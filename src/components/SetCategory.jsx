@@ -32,10 +32,10 @@ const SetCategory = () => {
   }, []);
 
   return (
-    <div className=" h-screen   space-y-6">
-      <h1 className="text-4xl font-semibold ">Add Categories details :</h1>
+    <div className="category h-screen    space-y-6">
+      <h1 className="text-2xl sm:text-4xl font-semibold ">Add Categories details :</h1>
       <form action="" onSubmit={handleSubmit} className="grid gap-6">
-        <div className="input-values  grid grid-cols-4">
+        <div className="input-values  grid grid-cols-4 mt-1 sm:mt-0">
           <Input
             label="Category name"
             name="name"

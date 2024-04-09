@@ -12,5 +12,5 @@ export default {
     extend: {},
   },
   plugins: [],
-  important: true, // add this line
+  // important: true, // add this line
 }

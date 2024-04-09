@@ -87,7 +87,7 @@ const CreateSubAdmin = () => {
 
   return (
     <div>
-       <h1 className="text-4xl font-semibold mb-5">Create Sub admin:</h1>
+       <h1 className="text-2xl sm:text-4xl font-semibold mb-5">Create Sub admin:</h1>
 
       <div className="flex space-x-4 my-8">
         <div className="flex-1">
