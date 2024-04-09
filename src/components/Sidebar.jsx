@@ -4,26 +4,26 @@ import Button from "./SideButton";
 import { Link } from "react-router-dom";
 const Sidebar = ({closeSidebar}) => {
   return (
-    <div className="border bg-slate-100 h-screen py-8 px-3 space-y-4 flex flex-col">
-      <Link to="/">
-        <Button label="Category" onClick={()=> closeSidebar(false)}/>
+    <div className="border bg-slate-100 h-screen py-8 px-3 space-y-4 flex flex-col" >
+      <Link to="/" onClick={()=> closeSidebar(false)}>
+        <Button label="Category" />
       </Link>
-      <Link to="/subCategory">
+      <Link to="/subCategory" onClick={()=> closeSidebar(false)}>
         <Button label="Sub Category" />
       </Link>
-      <Link to="/manageAds">
+      <Link to="/manageAds" onClick={()=> closeSidebar(false)}>
         <Button label="View Ads" />
       </Link>
-      <Link to="/manageUsers">
+      <Link to="/manageUsers" onClick={()=> closeSidebar(false)}>
         <Button label="View Users" />
       </Link>
-      <Link to="/premiumCategory">
+      <Link to="/premiumCategory" onClick={()=> closeSidebar(false)}>
         <Button label="Premium Category" />
       </Link>
-      <Link to="/managePremiumUsers">
+      <Link to="/managePremiumUsers" onClick={()=> closeSidebar(false)}>
         <Button label="Premium Users" />
       </Link>
-      <Link to="/createSubAdmin">
+      <Link to="/createSubAdmin" onClick={()=> closeSidebar(false)}>
         <Button label="Create Sub admin" />
       </Link>
       

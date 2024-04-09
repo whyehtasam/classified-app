@@ -24,7 +24,7 @@ function App() {
   return (
     <Router>
       <div className=" p-2 bg-slate-200 ">
-      <Button icon="pi pi-bars" className="mr-2" onClick={()=> setIsShow(!isShow)}/>
+      {isShow ? <Button icon="pi pi-times " className="mr-2 p-button-warning" onClick={()=> setIsShow(!isShow)}/> : <Button icon="pi pi-bars" className="mr-2" onClick={()=> setIsShow(!isShow)}/>}
       </div>
       
       <div className="grid grid-cols-6 relative">

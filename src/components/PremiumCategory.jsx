@@ -58,7 +58,7 @@ export default function PremiumCategoryTable() {
   return (
     <div className="card">
       <h1 className="text-2xl sm:text-4xl font-semibold mb-5">
-        Add premium category details :
+        Add premium category :
       </h1>
 
       <div className="p-fluid p-formgrid grid sm:grid-cols-2 grid-cols-1 gap-6 mb-6">
@@ -115,7 +115,7 @@ export default function PremiumCategoryTable() {
         </div>
         <div className="p-field p-col w-fit">
         <label className="text-white">add</label>
-          <Button label="Add Premium" onClick={addAd} />
+          <Button label="Add Premium" onClick={addAd}  className="p-button-success"/>
         </div>
       </div>
 
@@ -128,6 +128,7 @@ export default function PremiumCategoryTable() {
         emptyMessage="No ads found."
         globalFilter={globalFilter}
         header={header}
+
        
       >
         <Column
