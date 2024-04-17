@@ -13,6 +13,7 @@ import PremiumUserTable from "./components/PremiumUser";
 import CreateSubAdmin from "./components/CreateSubAdmin";
 import PremiumCategoryTable from "./components/PremiumCategory";
 import { Button } from 'primereact/button';
+import SetDetails from "./components/SetDetails";
 
 function App() {
   const [isShow,setIsShow] = useState(false);
@@ -23,12 +24,12 @@ function App() {
 
   return (
     <Router>
-      <div className=" p-2 bg-slate-200 ">
-      {isShow ? <Button icon="pi pi-times " className="mr-2 p-button-warning" onClick={()=> setIsShow(!isShow)}/> : <Button icon="pi pi-bars" className="mr-2" onClick={()=> setIsShow(!isShow)}/>}
+      <div className=" p-2 bg-slate-200 sm:p-8">
+      {isShow ? <Button icon="pi pi-times sm:hidden block" className="mr-2 p-button-warning" onClick={()=> setIsShow(!isShow)}/> : <Button icon="pi pi-bars" className="sm:hidden block mr-2" onClick={()=> setIsShow(!isShow)}/>}
       </div>
       
       <div className="grid grid-cols-6 relative">
-        <div className={`sm:block z-20 ${isShow ? 'block' : 'hidden'} sm:visible absolute sm:relative`}>
+        <div className={`sm:block z-20 h-screen ${isShow ? 'block' : 'hidden'} sm:visible absolute sm:relative`}>
           <Sidebar closeSidebar={closeSidebar}/>
         </div>
 
@@ -37,6 +38,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Category />} />
               <Route path="/subCategory" element={<SubCategory/>} />
+              <Route path="/details" element={<SetDetails/>} />
               <Route path="/manageAds" element={<ManageAds/>} />
               <Route path="/manageUsers" element={<ManageUsers/>} />
               <Route path="/managePremiumUsers" element={<PremiumUserTable/>} />

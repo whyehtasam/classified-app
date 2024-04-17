@@ -30,6 +30,10 @@ const SetCategory = () => {
       setCategory(JSON.parse(storedCategory));
     }
   }, []);
+  useEffect(() => {
+   console.log("Categories: ",category);
+  }, [category]);
+
 
   return (
     <div className="category h-screen    space-y-6">

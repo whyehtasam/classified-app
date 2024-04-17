@@ -53,6 +53,10 @@ const SetSubCategory = () => {
     }
   }, []);
 
+  useEffect(() => {
+    console.log("subCategories",subCategory);
+  },[subCategory])
+
   return (
     <div className=" h-screen   space-y-6">
       <h1 className="text-2xl sm:text-4xl font-semibold ">Add Sub Categories details :</h1>

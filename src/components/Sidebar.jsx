@@ -4,12 +4,15 @@ import Button from "./SideButton";
 import { Link } from "react-router-dom";
 const Sidebar = ({closeSidebar}) => {
   return (
-    <div className="border bg-slate-100 h-screen py-8 px-3 space-y-4 flex flex-col" >
+    <div className=" bg-slate-100 h-full py-8 px-3 space-y-4 flex flex-col" >
       <Link to="/" onClick={()=> closeSidebar(false)}>
         <Button label="Category" />
       </Link>
       <Link to="/subCategory" onClick={()=> closeSidebar(false)}>
         <Button label="Sub Category" />
+      </Link>
+      <Link to="/details" onClick={()=> closeSidebar(false)}>
+        <Button label="Add Details" />
       </Link>
       <Link to="/manageAds" onClick={()=> closeSidebar(false)}>
         <Button label="View Ads" />

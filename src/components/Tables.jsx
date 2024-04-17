@@ -41,8 +41,8 @@ export default function Tables({ categories, setCategories }) {
 
     const dialogFooter = (
         <React.Fragment>
-            <Button label="Cancel" icon="pi pi-times" className="p-button-text" onClick={() => setVisible(false)} />
-            <Button label="Save" icon="pi pi-check" className="p-button-text" onClick={saveChanges} />
+            <Button label="Cancel" icon="pi pi-times" className="" severity='warning' size='small' onClick={() => setVisible(false)} />
+            <Button label="Save" icon="pi pi-check " className="" onClick={saveChanges} severity='success' size='small'/>
         </React.Fragment>
     );
 
